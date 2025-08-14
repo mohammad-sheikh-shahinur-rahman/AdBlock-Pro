@@ -13,7 +13,7 @@ export function Header() {
 
   const navLinks = [
     { href: '/', label: 'Home' },
-    { href: '#instructions', label: 'How to Install' },
+    { href: '#features', label: 'Features' },
     { href: '#privacy-checker', label: 'Privacy Checker' },
   ];
 

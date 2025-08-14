@@ -5,20 +5,20 @@ interface InstructionStepProps {
   image: string;
   title: string;
   description: React.ReactNode;
-  step: number;
+  icon: React.ReactNode;
 }
 
 export function InstructionStep({
   image,
   title,
   description,
-  step,
+  icon,
 }: InstructionStepProps) {
   return (
     <div className="flex flex-col sm:flex-row items-start gap-6">
        <div className="flex-shrink-0">
          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-xl mb-4">
-          {step}
+          {icon}
         </div>
         <Image
           src={image}

@@ -23,109 +23,61 @@ import {
   ArrowRight,
   Shield,
   FileText,
-   Languages,
+  Languages,
+  Zap,
+  ShieldCheck,
+  Ban,
 } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { InstructionStep } from '@/components/instruction-step';
 import { AnimatedListItem } from '@/components/animated-list-item';
 
-const instructions = [
+const features = [
   {
     image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
-    title: 'Download the Extension',
-    description: 'Click the button above to download the AdBlockPro.zip file.',
+    title: 'Block Annoying Ads',
+    description: 'Enjoy a cleaner web by blocking all types of ads, including pop-ups, banners, and video ads.',
     language: 'english',
+    icon: <Ban />,
   },
   {
     image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
-    title: 'Unzip the File',
-    description:
-      'Extract the contents of the ZIP file to a dedicated folder on your computer.',
+    title: 'Enhanced Privacy Protection',
+    description: 'Stop trackers from following you across the web and collecting your personal data.',
     language: 'english',
+    icon: <ShieldCheck />,
   },
   {
     image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
-    title: 'Open Extensions Page',
-    description: (
-      <>
-        Launch Chrome and navigate to{' '}
-        <code className="font-bold bg-muted p-1 rounded-sm">
-          chrome://extensions/
-        </code>
-      </>
-    ),
+    title: 'Faster Page Loading',
+    description: 'Experience a faster web by preventing heavy ad scripts and trackers from loading.',
     language: 'english',
-  },
-    {
-    image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
-    title: 'Enable Developer Mode',
-    description:
-      'Find the "Developer mode" toggle in the top-right corner and switch it on.',
-    language: 'english',
-  },
-  {
-    image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
-    title: 'Load the Extension',
-    description:
-      "Click 'Load unpacked' and select the folder where you extracted the extension files.",
-    language: 'english',
-  },
-    {
-    image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
-    title: 'Installation Complete',
-    description:
-      'AdBlock Pro is now installed and actively blocking ads for a cleaner web experience.',
-    language: 'english',
+    icon: <Zap />,
   },
   {
     image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
-    title: 'এক্সটেনশন ডাউনলোড করুন',
-    description: 'AdBlockPro.zip ফাইলটি ডাউনলোড করতে উপরের বাটনে ক্লিক করুন।',
+    title: 'বিরক্তিকর বিজ্ঞাপন ব্লক করুন',
+    description: 'পপ-আপ, ব্যানার এবং ভিডিও বিজ্ঞাপন সহ সব ধরণের বিজ্ঞাপন ব্লক করে একটি পরিচ্ছন্ন ওয়েব উপভোগ করুন।',
     language: 'bangla',
+    icon: <Ban />,
   },
   {
     image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
-    title: 'ফাইলটি আনজিপ করুন',
-    description:
-      'ZIP ফাইলের বিষয়বস্তু আপনার কম্পিউটারের একটি ডেডিকেটেড ফোল্ডারে এক্সট্র্যাক্ট করুন।',
+    title: 'উন্নত গোপনীয়তা সুরক্ষা',
+    description: 'ট্র্যাকারদের ওয়েবে আপনাকে অনুসরণ করা এবং আপনার ব্যক্তিগত তথ্য সংগ্রহ করা থেকে বিরত রাখুন।',
     language: 'bangla',
+    icon: <ShieldCheck />,
   },
   {
     image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
-    title: 'এক্সটেনশন পেজ খুলুন',
-    description: (
-      <>
-        Chrome চালু করুন এবং এখানে নেভিগেট করুন{' '}
-        <code className="font-bold bg-muted p-1 rounded-sm">
-          chrome://extensions/
-        </code>
-      </>
-    ),
+    title: 'দ্রুত পেজ লোডিং',
+    description: 'ভারী বিজ্ঞাপনের স্ক্রিপ্ট এবং ট্র্যাকার লোড হওয়া প্রতিরোধ করে একটি দ্রুত ওয়েব অভিজ্ঞতা অর্জন করুন।',
     language: 'bangla',
-  },
-    {
-    image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
-    title: 'ডেভেলপার মোড চালু করুন',
-    description:
-      'উপরের-ডান দিকের কোণায় "ডেভেলপার মোড" টগলটি খুঁজুন এবং এটি চালু করুন।',
-    language: 'bangla',
-  },
-  {
-    image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
-    title: 'এক্সটেনশন লোড করুন',
-    description:
-      "'লোড আনপ্যাকড'-এ ক্লিক করুন এবং যেখানে আপনি এক্সটেনশন ফাইলগুলো এক্সট্র্যাক্ট করেছেন সেই ফোল্ডারটি সিলেক্ট করুন।",
-    language: 'bangla',
-  },
-  {
-    image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
-    title: 'ইনস্টলেশন সম্পন্ন',
-    description:
-      'AdBlock Pro এখন ইনস্টল করা হয়েছে এবং একটি ক্লিনার ওয়েব অভিজ্ঞতার জন্য সক্রিয়ভাবে বিজ্ঞাপন ব্লক করছে।',
-    language: 'bangla',
+    icon: <Zap />,
   },
 ];
+
 
 const initialState: PrivacyCheckerState = {};
 
@@ -199,8 +151,8 @@ export function PrivacyCheckerForm() {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline">
-                  <Link href="#instructions">
-                    Installation Guide
+                  <Link href="#features">
+                    Key Features
                   </Link>
                 </Button>
               </div>
@@ -307,19 +259,18 @@ export function PrivacyCheckerForm() {
         </div>
       </section>
       
-      <section id="instructions" className="w-full py-12 md:py-24 lg:py-32 border-t">
+      <section id="features" className="w-full py-12 md:py-24 lg:py-32 border-t">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-4">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
-                Installation
+                Features
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Easy 6-Step Installation
+                Key Features of AdBlock Pro
               </h2>
               <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Get AdBlock Pro up and running in minutes. Follow our simple
-                guide for Chrome.
+                Discover the benefits of using AdBlock Pro for a seamless browsing experience.
               </p>
             </div>
           </div>
@@ -333,7 +284,7 @@ export function PrivacyCheckerForm() {
                 <Card>
                   <CardContent className="p-6">
                     <div className="grid gap-8">
-                      {instructions
+                      {features
                         .filter((inst) => inst.language === 'english')
                         .map((item, index) => (
                           <AnimatedListItem key={`en-${index}`}>
@@ -341,7 +292,7 @@ export function PrivacyCheckerForm() {
                               image={item.image}
                               title={item.title}
                               description={item.description}
-                              step={index + 1}
+                              icon={item.icon}
                             />
                           </AnimatedListItem>
                         ))}
@@ -353,7 +304,7 @@ export function PrivacyCheckerForm() {
                 <Card>
                   <CardContent className="p-6">
                     <div className="grid gap-8">
-                      {instructions
+                      {features
                         .filter((inst) => inst.language === 'bangla')
                         .map((item, index) => (
                           <AnimatedListItem key={`bn-${index}`}>
@@ -361,7 +312,7 @@ export function PrivacyCheckerForm() {
                               image={item.image}
                               title={item.title}
                               description={item.description}
-                              step={index + 1}
+                              icon={item.icon}
                             />
                           </AnimatedListItem>
                         ))}
