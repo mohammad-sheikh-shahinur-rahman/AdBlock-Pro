@@ -27,6 +27,11 @@ import {
   Zap,
   ShieldCheck,
   Ban,
+  ArchiveRestore,
+  ToggleRight,
+  Upload,
+  CheckCircle,
+  Puzzle,
 } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -76,6 +81,81 @@ const features = [
     language: 'bangla',
     icon: <Zap />,
   },
+];
+
+const installationSteps = [
+    {
+        icon: <DownloadCloud />,
+        title: "Download the Extension",
+        description: "Click the 'Download for Chrome' button to get the AdBlockPro.zip file.",
+        language: "english"
+    },
+    {
+        icon: <ArchiveRestore />,
+        title: "Unzip the File",
+        description: "Extract the contents of the ZIP file to a folder on your computer.",
+        language: "english"
+    },
+    {
+        icon: <Puzzle />,
+        title: "Open Extensions Page",
+        description: "In Chrome, go to chrome://extensions or Menu > Extensions > Manage Extensions.",
+        language: "english"
+    },
+    {
+        icon: <ToggleRight />,
+        title: "Enable Developer Mode",
+        description: "Turn on the 'Developer mode' toggle, usually in the top-right corner.",
+        language: "english"
+    },
+    {
+        icon: <Upload />,
+        title: "Load Unpacked",
+        description: "Click 'Load unpacked' and select the folder where you extracted the extension files.",
+        language: "english"
+    },
+    {
+        icon: <CheckCircle />,
+        title: "Installation Complete",
+        description: "AdBlock Pro is now installed and actively blocking ads.",
+        language: "english"
+    },
+    {
+        icon: <DownloadCloud />,
+        title: "এক্সটেনশন ডাউনলোড করুন",
+        description: "AdBlockPro.zip ফাইলটি পেতে 'Download for Chrome' বোতামে ক্লিক করুন।",
+        language: "bangla"
+    },
+    {
+        icon: <ArchiveRestore />,
+        title: "ফাইলটি আনজিপ করুন",
+        description: "আপনার কম্পিউটারের একটি ফোল্ডারে ZIP ফাইলের বিষয়বস্তু এক্সট্র্যাক্ট করুন।",
+        language: "bangla"
+    },
+    {
+        icon: <Puzzle />,
+        title: "এক্সটেনশন পেজ খুলুন",
+        description: "Chrome-এ, chrome://extensions এ যান অথবা Menu > Extensions > Manage Extensions এ যান।",
+        language: "bangla"
+    },
+    {
+        icon: <ToggleRight />,
+        title: "ডেভেলপার মোড চালু করুন",
+        description: "সাধারণত উপরের-ডানদিকের কোণায় থাকা 'Developer mode' টগলটি চালু করুন।",
+        language: "bangla"
+    },
+    {
+        icon: <Upload />,
+        title: "লোড আনপ্যাকড",
+        description: "'Load unpacked' এ ক্লিক করুন এবং যে ফোল্ডারে এক্সটেনশন ফাইলগুলো এক্সট্র্যাক্ট করেছেন তা নির্বাচন করুন।",
+        language: "bangla"
+    },
+    {
+        icon: <CheckCircle />,
+        title: "ইনস্টলেশন সম্পন্ন",
+        description: "AdBlock Pro এখন ইনস্টল করা হয়েছে এবং সক্রিয়ভাবে বিজ্ঞাপন ব্লক করছে।",
+        language: "bangla"
+    }
 ];
 
 
@@ -158,7 +238,7 @@ export function PrivacyCheckerForm() {
               </div>
             </div>
             <Image
-              src="https://i.ibb.co/rGx3s29b/Ad-Block-Pro.png"
+              src="https://i.ibb.co/rGx3s29/Ad-Block-Pro.png"
               width="600"
               height="400"
               alt="Hero"
@@ -313,6 +393,70 @@ export function PrivacyCheckerForm() {
                               title={item.title}
                               description={item.description}
                               icon={item.icon}
+                            />
+                          </AnimatedListItem>
+                        ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </div>
+      </section>
+
+      <section id="installation-guide" className="w-full py-12 md:py-24 lg:py-32 bg-background border-t">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-4">
+              <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">
+                Installation
+              </div>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                AdBlock Pro — Chrome Extension Install Guide
+              </h2>
+              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Follow these simple steps to install the AdBlock Pro extension in your Chrome browser.
+              </p>
+            </div>
+          </div>
+          <div className="mx-auto max-w-4xl pt-12">
+            <Tabs defaultValue="english" className="w-full">
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="english" className="flex items-center gap-2"><Languages /> English</TabsTrigger>
+                <TabsTrigger value="bangla" className="flex items-center gap-2"><Languages /> বাংলা (Bangla)</TabsTrigger>
+              </TabsList>
+              <TabsContent value="english">
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="grid gap-8">
+                      {installationSteps
+                        .filter((step) => step.language === 'english')
+                        .map((step, index) => (
+                          <AnimatedListItem key={`install-en-${index}`}>
+                            <InstructionStep
+                              title={step.title}
+                              description={step.description}
+                              icon={step.icon}
+                            />
+                          </AnimatedListItem>
+                        ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+              <TabsContent value="bangla">
+                <Card>
+                  <CardContent className="p-6">
+                    <div className="grid gap-8">
+                      {installationSteps
+                        .filter((step) => step.language === 'bangla')
+                        .map((step, index) => (
+                          <AnimatedListItem key={`install-bn-${index}`}>
+                            <InstructionStep
+                              title={step.title}
+                              description={step.description}
+                              icon={step.icon}
                             />
                           </AnimatedListItem>
                         ))}

@@ -15,6 +15,7 @@ export function Header() {
     { href: '/', label: 'Home' },
     { href: '#features', label: 'Features' },
     { href: '#privacy-checker', label: 'Privacy Checker' },
+    { href: '#installation-guide', label: 'Install Guide' },
   ];
 
   return (
