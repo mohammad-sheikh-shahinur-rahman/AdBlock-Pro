@@ -21,7 +21,7 @@ export function Header() {
     <header className="bg-card border-b sticky top-0 z-50">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <AdBlockProLogo className="h-8 w-auto" />
+          <AdBlockProLogo className="text-primary" />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
@@ -40,7 +40,7 @@ export function Header() {
         <div className="hidden md:block">
            <Button asChild>
                 <a
-                    href="https://drive.google.com/file/d/1NmdH7pVy57C10ImLD49otvIa_mVkVcS9/view?usp=sharing"
+                    href="https://minhazul-islam-santo.github.io/adblockpro/AdBlockPro.zip"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -73,7 +73,7 @@ export function Header() {
                  <div className="mt-6">
                     <Button asChild className="w-full">
                         <a
-                            href="https://drive.google.com/file/d/1NmdH7pVy57C10ImLD49otvIa_mVkVcS9/view?usp=sharing"
+                            href="https://minhazul-islam-santo.github.io/adblockpro/AdBlockPro.zip"
                             target="_blank"
                             rel="noopener noreferrer"
                         >

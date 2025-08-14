@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
 import Link from 'next/link';
+import Image from 'next/image';
 import { checkPrivacyAction } from './actions';
 import type { PrivacyCheckerState } from './types';
 import { Button } from '@/components/ui/button';
@@ -19,11 +20,6 @@ import {
   Loader2,
   AlertTriangle,
   DownloadCloud,
-  Chrome,
-  ToggleRight,
-  FolderUp,
-  CheckCircle,
-  Archive,
   ArrowRight,
   Shield,
   FileText,
@@ -36,20 +32,20 @@ import { AnimatedListItem } from '@/components/animated-list-item';
 
 const instructions = [
   {
-    icon: <DownloadCloud />,
+    image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
     title: 'Download the Extension',
     description: 'Click the button above to download the AdBlockPro.zip file.',
     language: 'english',
   },
   {
-    icon: <Archive />,
+    image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
     title: 'Unzip the File',
     description:
       'Extract the contents of the ZIP file to a dedicated folder on your computer.',
     language: 'english',
   },
   {
-    icon: <Chrome />,
+    image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
     title: 'Open Extensions Page',
     description: (
       <>
@@ -61,42 +57,42 @@ const instructions = [
     ),
     language: 'english',
   },
-  {
-    icon: <ToggleRight />,
+    {
+    image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
     title: 'Enable Developer Mode',
     description:
       'Find the "Developer mode" toggle in the top-right corner and switch it on.',
     language: 'english',
   },
   {
-    icon: <FolderUp />,
+    image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
     title: 'Load the Extension',
     description:
       "Click 'Load unpacked' and select the folder where you extracted the extension files.",
     language: 'english',
   },
-  {
-    icon: <CheckCircle />,
+    {
+    image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
     title: 'Installation Complete',
     description:
       'AdBlock Pro is now installed and actively blocking ads for a cleaner web experience.',
     language: 'english',
   },
   {
-    icon: <DownloadCloud />,
+    image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
     title: 'এক্সটেনশন ডাউনলোড করুন',
     description: 'AdBlockPro.zip ফাইলটি ডাউনলোড করতে উপরের বাটনে ক্লিক করুন।',
     language: 'bangla',
   },
   {
-    icon: <Archive />,
+    image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
     title: 'ফাইলটি আনজিপ করুন',
     description:
       'ZIP ফাইলের বিষয়বস্তু আপনার কম্পিউটারের একটি ডেডিকেটেড ফোল্ডারে এক্সট্র্যাক্ট করুন।',
     language: 'bangla',
   },
   {
-    icon: <Chrome />,
+    image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
     title: 'এক্সটেনশন পেজ খুলুন',
     description: (
       <>
@@ -108,22 +104,22 @@ const instructions = [
     ),
     language: 'bangla',
   },
-  {
-    icon: <ToggleRight />,
+    {
+    image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
     title: 'ডেভেলপার মোড চালু করুন',
     description:
       'উপরের-ডান দিকের কোণায় "ডেভেলপার মোড" টগলটি খুঁজুন এবং এটি চালু করুন।',
     language: 'bangla',
   },
   {
-    icon: <FolderUp />,
+    image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
     title: 'এক্সটেনশন লোড করুন',
     description:
       "'লোড আনপ্যাকড'-এ ক্লিক করুন এবং যেখানে আপনি এক্সটেনশন ফাইলগুলো এক্সট্র্যাক্ট করেছেন সেই ফোল্ডারটি সিলেক্ট করুন।",
     language: 'bangla',
   },
   {
-    icon: <CheckCircle />,
+    image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
     title: 'ইনস্টলেশন সম্পন্ন',
     description:
       'AdBlock Pro এখন ইনস্টল করা হয়েছে এবং একটি ক্লিনার ওয়েব অভিজ্ঞতার জন্য সক্রিয়ভাবে বিজ্ঞাপন ব্লক করছে।',
@@ -209,7 +205,7 @@ export function PrivacyCheckerForm() {
                 </Button>
               </div>
             </div>
-            <img
+            <Image
               src="https://i.ibb.co/rGx3s29b/Ad-Block-Pro.png"
               width="600"
               height="400"
@@ -342,7 +338,7 @@ export function PrivacyCheckerForm() {
                         .map((item, index) => (
                           <AnimatedListItem key={`en-${index}`}>
                             <InstructionStep
-                              icon={item.icon}
+                              image={item.image}
                               title={item.title}
                               description={item.description}
                               step={index + 1}
@@ -362,7 +358,7 @@ export function PrivacyCheckerForm() {
                         .map((item, index) => (
                           <AnimatedListItem key={`bn-${index}`}>
                             <InstructionStep
-                              icon={item.icon}
+                              image={item.image}
                               title={item.title}
                               description={item.description}
                               step={index + 1}

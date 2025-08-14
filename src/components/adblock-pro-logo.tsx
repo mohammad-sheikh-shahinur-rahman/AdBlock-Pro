@@ -14,14 +14,14 @@ const AdBlockProLogo = ({ className }: { className?: string }) => {
       >
         <path
           d="M16 29.3333C16 29.3333 26.6667 24 26.6667 16V6.66666L16 2.66666L5.33333 6.66666V16C5.33333 24 16 29.3333 16 29.3333Z"
-          stroke="hsl(var(--primary))"
+          stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M11.3333 16L14.6667 19.3333L21.3333 12.6667"
-          stroke="hsl(var(--primary))"
+          stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
