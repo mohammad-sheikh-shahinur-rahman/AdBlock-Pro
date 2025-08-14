@@ -10,7 +10,7 @@ export function Header() {
 
   const navLinks = [
     { href: '/', label: 'Instructions' },
-    { href: '/sentiment-analysis', label: 'Sentiment Analysis' },
+    { href: '/privacy-checker', label: 'Privacy Checker' },
   ];
 
   return (

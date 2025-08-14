@@ -6,7 +6,7 @@ import {
   ToggleRight,
   FolderUp,
   CheckCircle,
-  MousePointerClick,
+  ShieldCheck,
   ChevronRight,
 } from 'lucide-react';
 import { InstructionStep } from '@/components/instruction-step';
@@ -201,17 +201,17 @@ export default function Home() {
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
-              Optimize Your Instructions
+              Check Website Privacy
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Use our AI-powered tool to analyze and improve your instructional text for different languages and cultures.
+              Use our AI-powered tool to analyze any website's privacy policy and get a clear, easy-to-understand summary.
             </p>
           </div>
           <div className="mx-auto w-full max-w-sm space-y-2">
             <Button asChild size="lg">
-              <Link href="/sentiment-analysis">
-                Go to Sentiment Analysis Tool
-                <MousePointerClick className="ml-2 h-5 w-5" />
+              <Link href="/privacy-checker">
+                Go to Privacy Checker
+                <ShieldCheck className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
