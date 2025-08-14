@@ -8,11 +8,10 @@ const AdBlockProLogo = ({ className }: { className?: string }) => {
       <Image
         src="https://i.ibb.co/rGx3s29b/Ad-Block-Pro.png"
         alt="AdBlock Pro Logo"
-        width={40}
+        width={140}
         height={40}
-        className="h-10 w-10 rounded-md"
+        className="h-10 w-auto"
       />
-      <span className="text-2xl font-bold font-headline text-primary">AdBlock Pro</span>
     </div>
   );
 };
