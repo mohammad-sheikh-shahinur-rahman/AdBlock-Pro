@@ -156,12 +156,12 @@ const installationSteps = [
 export function PrivacyCheckerForm() {
   return (
     <>
-      <section className="w-full py-20 md:py-32 lg:py-40 bg-card border-b">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-card border-b">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <div className="flex flex-col justify-center space-y-6">
               <div className="space-y-4">
-                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-primary">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none text-primary">
                   Browse Freely with AdBlock Pro
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -199,7 +199,7 @@ export function PrivacyCheckerForm() {
               height="400"
               alt="Hero"
               data-ai-hint="abstract privacy"
-              className="mx-auto aspect-[4/3] overflow-hidden rounded-xl object-contain"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-contain sm:aspect-[4/3]"
             />
           </div>
         </div>

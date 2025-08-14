@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -26,7 +27,7 @@ export function Header() {
   return (
     <header className="bg-card border-b sticky top-0 z-50">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="/">
+        <Link href="/" className="flex items-center gap-2">
           <AdBlockProLogo />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -65,7 +66,9 @@ export function Header() {
           </SheetTrigger>
           <SheetContent side="right">
             <SheetHeader>
-              <SheetTitle className="sr-only">Menu</SheetTitle>
+               <SheetTitle>
+                <AdBlockProLogo />
+              </SheetTitle>
             </SheetHeader>
             <nav className="grid gap-6 text-lg font-medium mt-10">
               {navLinks.map((link) => (
