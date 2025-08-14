@@ -161,7 +161,7 @@ export function PrivacyCheckerForm() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <div className="flex flex-col justify-center space-y-6">
               <div className="space-y-4">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none text-primary">
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
                   Browse Freely with AdBlock Pro
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
