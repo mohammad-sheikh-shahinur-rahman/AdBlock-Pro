@@ -40,42 +40,36 @@ import { AnimatedListItem } from '@/components/animated-list-item';
 
 const features = [
   {
-    image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
     title: 'Block Annoying Ads',
     description: 'Enjoy a cleaner web by blocking all types of ads, including pop-ups, banners, and video ads.',
     language: 'english',
     icon: <Ban />,
   },
   {
-    image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
     title: 'Enhanced Privacy Protection',
     description: 'Stop trackers from following you across the web and collecting your personal data.',
     language: 'english',
     icon: <ShieldCheck />,
   },
   {
-    image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
     title: 'Faster Page Loading',
     description: 'Experience a faster web by preventing heavy ad scripts and trackers from loading.',
     language: 'english',
     icon: <Zap />,
   },
   {
-    image: 'https://i.ibb.co/9HhhPKJG/Screenshot-2025-08-14-190420.png',
     title: 'বিরক্তিকর বিজ্ঞাপন ব্লক করুন',
     description: 'পপ-আপ, ব্যানার এবং ভিডিও বিজ্ঞাপন সহ সব ধরণের বিজ্ঞাপন ব্লক করে একটি পরিচ্ছন্ন ওয়েব উপভোগ করুন।',
     language: 'bangla',
     icon: <Ban />,
   },
   {
-    image: 'https://i.ibb.co/7DQ5VyJ/Screenshot-2025-08-14-190316.png',
     title: 'উন্নত গোপনীয়তা সুরক্ষা',
     description: 'ট্র্যাকারদের ওয়েবে আপনাকে অনুসরণ করা এবং আপনার ব্যক্তিগত তথ্য সংগ্রহ করা থেকে বিরত রাখুন।',
     language: 'bangla',
     icon: <ShieldCheck />,
   },
   {
-    image: 'https://i.ibb.co/4Zmzpfzx/Screenshot-2025-08-14-190249.png',
     title: 'দ্রুত পেজ লোডিং',
     description: 'ভারী বিজ্ঞাপনের স্ক্রিপ্ট এবং ট্র্যাকার লোড হওয়া প্রতিরোধ করে একটি দ্রুত ওয়েব অভিজ্ঞতা অর্জন করুন।',
     language: 'bangla',
@@ -369,7 +363,6 @@ export function PrivacyCheckerForm() {
                         .map((item, index) => (
                           <AnimatedListItem key={`en-${index}`}>
                             <InstructionStep
-                              image={item.image}
                               title={item.title}
                               description={item.description}
                               icon={item.icon}
@@ -389,7 +382,6 @@ export function PrivacyCheckerForm() {
                         .map((item, index) => (
                           <AnimatedListItem key={`bn-${index}`}>
                             <InstructionStep
-                              image={item.image}
                               title={item.title}
                               description={item.description}
                               icon={item.icon}
