@@ -7,12 +7,15 @@ const SentimentInputSchema = z.object({
   englishText: z.string(),
   banglaText: z.string(),
 });
+export type SentimentInput = z.infer<typeof SentimentInputSchema>;
 
 const SentimentOutputSchema = z.object({
   englishSentiment: z.string(),
   banglaSentiment: z.string(),
   adjustmentSuggestion: z.string(),
 });
+export type SentimentOutput = z.infer<typeof SentimentOutputSchema>;
+
 
 const sentimentAnalysisPrompt = ai.definePrompt({
   name: 'sentimentAnalysisPrompt',
@@ -45,9 +48,9 @@ const sentimentAnalysisPrompt = ai.definePrompt({
   },
 });
 
-export const crossLingualSentiment = ai.defineFlow(
+const crossLingualSentimentFlow = ai.defineFlow(
   {
-    name: 'crossLingualSentiment',
+    name: 'crossLingualSentimentFlow',
     inputSchema: SentimentInputSchema,
     outputSchema: SentimentOutputSchema,
   },
@@ -62,3 +65,8 @@ export const crossLingualSentiment = ai.defineFlow(
     );
   }
 );
+
+
+export async function analyzeSentiment(input: SentimentInput): Promise<SentimentOutput> {
+    return await crossLingualSentimentFlow(input);
+}

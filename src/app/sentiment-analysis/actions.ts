@@ -1,8 +1,7 @@
 'use server';
 
 import { z } from 'zod';
-import { run } from '@genkit-ai/next';
-import { crossLingualSentiment } from '@/ai/flows/sentiment';
+import { analyzeSentiment } from '@/ai/flows/sentiment';
 
 const sentimentSchema = z.object({
   englishText: z.string().min(10, { message: 'English text must be at least 10 characters.' }),
@@ -37,7 +36,7 @@ export async function analyzeSentimentAction(
   }
 
   try {
-    const result = await run(crossLingualSentiment, validatedFields.data);
+    const result = await analyzeSentiment(validatedFields.data);
     return { data: result };
   } catch (e: any) {
     console.error(e);
