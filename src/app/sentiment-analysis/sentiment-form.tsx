@@ -1,7 +1,7 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import React, { useEffect } from 'react';
+import { useFormStatus } from 'react-dom';
+import React, { useEffect, useActionState } from 'react';
 import { analyzeSentimentAction, type SentimentState } from './actions';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -47,7 +47,7 @@ function SubmitButton() {
 }
 
 export function SentimentForm() {
-  const [state, formAction] = useFormState(analyzeSentimentAction, initialState);
+  const [state, formAction] = useActionState(analyzeSentimentAction, initialState);
   const { toast } = useToast();
 
   useEffect(() => {
