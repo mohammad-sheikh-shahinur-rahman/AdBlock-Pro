@@ -3,7 +3,13 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import AdBlockProLogo from '@/components/adblock-pro-logo';
@@ -58,6 +64,9 @@ export function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right">
+            <SheetHeader>
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+            </SheetHeader>
             <nav className="grid gap-6 text-lg font-medium mt-10">
               {navLinks.map((link) => (
                 <Link
