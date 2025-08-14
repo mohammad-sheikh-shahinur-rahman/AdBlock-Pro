@@ -49,7 +49,7 @@ export function Header() {
         <div className="hidden md:block">
           <Button asChild>
             <a
-              href="https://minhazul-islam-santo.github.io/adblockpro/AdBlockPro.zip"
+              href="https://drive.google.com/file/d/1NmdH7pVy57C10ImLD49otvIa_mVkVcS9/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -91,7 +91,7 @@ export function Header() {
             <div className="mt-6">
               <Button asChild className="w-full">
                 <a
-                  href="https://minhazul-islam-santo.github.io/adblockpro/AdBlockPro.zip"
+                  href="https://drive.google.com/file/d/1NmdH7pVy57C10ImLD49otvIa_mVkVcS9/view?usp=drivesdk"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

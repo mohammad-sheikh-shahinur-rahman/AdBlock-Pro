@@ -177,7 +177,7 @@ export function PrivacyCheckerForm() {
                   className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6 px-8 sm:px-10 shadow-lg transition-transform transform hover:scale-105"
                 >
                   <a
-                    href="https://minhazul-islam-santo.github.io/adblockpro/AdBlockPro.zip"
+                    href="https://drive.google.com/file/d/1NmdH7pVy57C10ImLD49otvIa_mVkVcS9/view?usp=drivesdk"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
