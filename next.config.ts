@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.bangla-kobita.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'iili.io',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

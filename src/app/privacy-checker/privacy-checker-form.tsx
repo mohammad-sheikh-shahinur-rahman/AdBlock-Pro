@@ -161,7 +161,7 @@ export function PrivacyCheckerForm() {
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-6">
               <div className="space-y-4">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-primary">
                   Browse Freely with AdBlock Pro
                 </h1>
                 <p className="max-w-[600px] text-muted-foreground text-base sm:text-lg md:text-xl">
@@ -194,7 +194,7 @@ export function PrivacyCheckerForm() {
               </div>
             </div>
             <Image
-              src="https://i.ibb.co/vxzg29f/Ad-Block-Pro.png"
+              src="https://iili.io/FDx3Pe4.png"
               width="600"
               height="400"
               alt="Hero"
