@@ -1,3 +1,4 @@
+import React from 'react';
 import type { LucideProps } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
 

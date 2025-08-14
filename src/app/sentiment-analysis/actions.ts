@@ -1,7 +1,7 @@
 'use server';
 
 import { z } from 'zod';
-import { run } from '@genkit-ai/next/server';
+import { run } from '@genkit-ai/next';
 import { crossLingualSentiment } from '@/ai/flows/sentiment';
 
 const sentimentSchema = z.object({
