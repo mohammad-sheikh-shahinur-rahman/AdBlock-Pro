@@ -16,7 +16,7 @@ export function Footer() {
           <h3 className="text-xl md:text-2xl font-bold text-primary">
             মোহাম্মদ শেখ শাহিনুর রহমান
           </h3>
-          <p className="text-muted-foreground mt-2 max-w-2xl text-sm md:text-base">
+          <p className="text-muted-foreground mt-2 max-w-2xl text-sm md:text-base px-2">
             কবি | লেখক | সফটওয়্যার ইঞ্জিনিয়ার | প্রোগ্রামার | ডিজিটাল ফরেনসিক বিশেষজ্ঞ | প্রযুক্তি উদ্ভাবক
           </p>
           <p className="text-xs md:text-sm text-muted-foreground mt-6">

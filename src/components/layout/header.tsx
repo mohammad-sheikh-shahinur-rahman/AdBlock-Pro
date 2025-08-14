@@ -67,7 +67,9 @@ export function Header() {
           <SheetContent side="right">
             <SheetHeader>
                <SheetTitle>
-                <AdBlockProLogo />
+                 <Link href="/" className="flex items-center gap-2">
+                    <AdBlockProLogo />
+                 </Link>
               </SheetTitle>
             </SheetHeader>
             <nav className="grid gap-6 text-lg font-medium mt-10">

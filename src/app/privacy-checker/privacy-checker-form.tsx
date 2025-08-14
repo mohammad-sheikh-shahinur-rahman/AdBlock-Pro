@@ -158,23 +158,23 @@ export function PrivacyCheckerForm() {
     <>
       <section className="w-full py-12 md:py-24 lg:py-32 bg-card border-b">
         <div className="container px-4 md:px-6">
-          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="flex flex-col justify-center space-y-6">
               <div className="space-y-4">
                 <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-primary">
                   Browse Freely with AdBlock Pro
                 </h1>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl">
+                <p className="max-w-[600px] text-muted-foreground text-base sm:text-lg md:text-xl">
                   Take control of your online experience. Download our free
                   Chrome extension to block ads, stop trackers, and enjoy a
                   faster, cleaner web.
                 </p>
               </div>
-              <div className="flex flex-col gap-4 min-[400px]:flex-row">
+              <div className="flex flex-col gap-4 sm:flex-row">
                 <Button
                   asChild
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6 px-10 shadow-lg transition-transform transform hover:scale-105"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg py-6 px-8 sm:px-10 shadow-lg transition-transform transform hover:scale-105"
                 >
                   <a
                     href="https://minhazul-islam-santo.github.io/adblockpro/AdBlockPro.zip"
@@ -199,7 +199,7 @@ export function PrivacyCheckerForm() {
               height="400"
               alt="Hero"
               data-ai-hint="abstract privacy"
-              className="mx-auto aspect-video overflow-hidden rounded-xl object-contain sm:aspect-[4/3]"
+              className="mx-auto aspect-video overflow-hidden rounded-xl object-contain"
             />
           </div>
         </div>
