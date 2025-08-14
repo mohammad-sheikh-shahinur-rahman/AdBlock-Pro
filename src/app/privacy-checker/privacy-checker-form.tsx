@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -193,12 +194,12 @@ export function PrivacyCheckerForm() {
               </div>
             </div>
             <Image
-              src="https://i.ibb.co/rGx3s29b/Ad-Block-Pro.png"
+              src="https://i.ibb.co/rGx3s29/Ad-Block-Pro.png"
               width="600"
               height="400"
               alt="Hero"
               data-ai-hint="abstract privacy"
-              className="mx-auto aspect-[4/3] overflow-hidden rounded-xl object-cover"
+              className="mx-auto aspect-[4/3] overflow-hidden rounded-xl object-contain"
             />
           </div>
         </div>
@@ -351,3 +352,5 @@ export function PrivacyCheckerForm() {
     </>
   );
 }
+
+    
