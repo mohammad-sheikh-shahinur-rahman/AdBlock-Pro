@@ -193,7 +193,7 @@ export function PrivacyCheckerForm() {
               </div>
             </div>
             <Image
-              src="https://i.ibb.co/wJ3d6Q8/Ad-Block-Pro.png"
+              src="https://i.ibb.co/rGx3s29b/Ad-Block-Pro.png"
               width="600"
               height="400"
               alt="Hero"
