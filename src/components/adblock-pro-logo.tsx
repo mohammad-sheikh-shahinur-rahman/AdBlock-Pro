@@ -6,7 +6,7 @@ const AdBlockProLogo = ({ className }: { className?: string }) => {
   return (
     <div className={cn('flex items-center gap-2', className)}>
       <Image
-        src="https://i.ibb.co/rGx3s29/Ad-Block-Pro.png"
+        src="https://i.ibb.co/vxzg29f/Ad-Block-Pro.png"
         alt="AdBlock Pro Logo"
         width={140}
         height={40}
