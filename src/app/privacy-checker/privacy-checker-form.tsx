@@ -242,6 +242,7 @@ export function PrivacyCheckerForm() {
                               title={item.title}
                               description={item.description}
                               icon={item.icon}
+                              showImage={false}
                             />
                           </AnimatedListItem>
                         ))}
@@ -261,6 +262,7 @@ export function PrivacyCheckerForm() {
                               title={item.title}
                               description={item.description}
                               icon={item.icon}
+                              showImage={false}
                             />
                           </AnimatedListItem>
                         ))}
