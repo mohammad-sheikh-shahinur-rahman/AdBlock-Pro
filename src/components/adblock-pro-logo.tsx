@@ -12,7 +12,7 @@ const AdBlockProLogo = ({ className }: { className?: string }) => {
         height={40}
         className="h-10 w-10 rounded-md"
       />
-      <span className="text-2xl font-bold font-headline">AdBlock Pro</span>
+      <span className="text-2xl font-bold font-headline text-primary">AdBlock Pro</span>
     </div>
   );
 };

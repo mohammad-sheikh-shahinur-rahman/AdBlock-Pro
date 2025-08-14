@@ -20,8 +20,8 @@ export function Header() {
   return (
     <header className="bg-card border-b sticky top-0 z-50">
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2">
-          <AdBlockProLogo className="text-primary" />
+        <Link href="/">
+          <AdBlockProLogo />
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
           {navLinks.map((link) => (
