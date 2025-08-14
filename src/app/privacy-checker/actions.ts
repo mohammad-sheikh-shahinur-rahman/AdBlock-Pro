@@ -1,16 +1,11 @@
 'use server';
-
 import { z } from 'zod';
-import { checkPrivacy, type PrivacyCheckerOutput } from '@/ai/flows/privacy-checker';
+import { checkPrivacy } from '@/ai/flows/privacy-checker';
+import type { PrivacyCheckerState } from './types';
 
 const privacySchema = z.object({
   url: z.string().url({ message: 'Please enter a valid URL.' }),
 });
-
-export interface PrivacyCheckerState {
-  data?: PrivacyCheckerOutput;
-  error?: string;
-}
 
 export async function checkPrivacyAction(
   prevState: PrivacyCheckerState,
@@ -27,7 +22,7 @@ export async function checkPrivacyAction(
   }
 
   try {
-    const result = await checkPrivacy(validatedFields.data.url);
+    const result = await checkPrivacy({ url: validatedFields.data.url });
     return { data: result };
   } catch (e: any) {
     console.error(e);

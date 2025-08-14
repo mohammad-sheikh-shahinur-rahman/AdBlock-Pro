@@ -1,18 +1,8 @@
 'use server';
 import {ai} from '@/ai/genkit';
-import {z} from 'genkit/zod';
+import type { PrivacyCheckerInput, PrivacyCheckerOutput } from '@/app/privacy-checker/types';
+import { PrivacyCheckerInputSchema, PrivacyCheckerOutputSchema } from '@/app/privacy-checker/types';
 
-export const PrivacyCheckerInputSchema = z.object({
-  url: z.string().url(),
-});
-
-export const PrivacyCheckerOutputSchema = z.object({
-  privacyScore: z.number().min(0).max(100).describe("A score from 0-100 indicating how privacy-friendly the site is. Higher is better."),
-  summary: z.string().describe("A concise, easy-to-understand summary of the website's privacy policy and practices."),
-  concerns: z.array(z.string()).describe("A list of potential privacy concerns or red flags."),
-});
-
-export type PrivacyCheckerOutput = z.infer<typeof PrivacyCheckerOutputSchema>;
 
 const privacyCheckPrompt = ai.definePrompt({
     name: 'privacyCheckPrompt',
@@ -47,6 +37,6 @@ const privacyCheckerFlow = ai.defineFlow(
   }
 );
 
-export async function checkPrivacy(url: string): Promise<PrivacyCheckerOutput> {
-  return await privacyCheckerFlow({ url });
+export async function checkPrivacy(input: PrivacyCheckerInput): Promise<PrivacyCheckerOutput> {
+  return await privacyCheckerFlow(input);
 }
