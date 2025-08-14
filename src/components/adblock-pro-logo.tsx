@@ -10,7 +10,7 @@ const AdBlockProLogo = ({ className }: { className?: string }) => {
         alt="AdBlock Pro Logo"
         width={40}
         height={40}
-        className="h-10 w-10"
+        className="h-10 w-10 rounded-md"
       />
       <span className="text-2xl font-bold font-headline">AdBlock Pro</span>
     </div>
