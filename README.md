@@ -2,6 +2,10 @@
 **AI-Powered AdBlock Chrome Extension** — Next-gen ad blocking with network-level filtering, smart cosmetic rules, and **Google Gemini AI** to auto-detect new ad & tracker patterns.
 
 ---
+## 🌐 Official Website
+[🔗 Visit AdBlock-Pro Website](https://adblock-pro.netlify.app/)
+---
+
 
 ## ✨ Key Features
 - **Network-Level Blocking** — MV3 declarativeNetRequest with curated blocklists (EasyList, EasyPrivacy compatible).
